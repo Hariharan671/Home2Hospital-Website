@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title> HOME PAGE</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'style1.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="main_container" id="home">
+		<div class="navbar">
+			<input type="checkbox" id="check">
+			<label for="check">
+				<i class="fa fa-bars" id="btn2"></i>
+				<i class="fa fa-times" id="cancel"></i></label>
+			<div class="sidebar">
+				<header>Menu</header>
+				<ul>
+					<li><a href="{% url 'tracker' %}">Understand Corona</a></li>
+					<li><a href="{% url 'index' %}">Home2Hospital</a></li>
+					<li><a href="#">Covid Tracker</a></li>
+					<li><a href="{% url 'lead' %}">Medical Assistance</a></li>
+					<li><a href="https://bit.ly/2XEtdV0">Feedback</a></li>
+					<li><a href="{% url 'donate' %}">Donation</a></li>
+				</ul>
+			</div>
+			<section></section>
+			<div class="navbar_items">
+				<ul>
+					<li><a href="#" style="font-size: 20px;"><strong>HOME</strong></a></li>
+					<li><a href="#about" style="font-size: 20px;"><strong>BLOG</strong></a></li>
+					<li><a href="#services" style="font-size: 20px;"><strong>SERVICES</strong></a></li>
+					<li><a href="#ourteam" style="font-size: 20px;"><strong>OUR TEAM</strong></a></li>
+					<li><a href="https://www.linkedin.com/in/hariharan-r-s-4862b01a1/" style="font-size: 20px;"><strong>CONTACT US</strong></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="banner_image">
+			<div class="banner_content">
+				<h1 style="color: black">Only we can change this situation</h1>
+				<span style="color: black;font-size: 20px;"><strong>Let's be together in this panedemic situation</strong></span>
+			</div>
+		</div>
+		<div class="about" id="about">
+			<h1 class="title">BLOG</h1>
+			<p class="blog1" style="font-family: sans-serif;font-size: 20px">Due to Corona Virus outbreak and impact of global economics crisis all the industries are shutting down so due to this Students are facing lots of problems and they are in under pressure. If We talk about B.Tech Students they are facing so many issues and 3rd Year students are not getting Internship and they has a fear of placement preparation also. So, some Institutes are giving better opportunity to students to utilize this time period of quarantine and learn some new skills. We are a part of one such Best Programming Institute ‘Coding Ninjas’.</p>
+
+
+<p class="blog1" style="font-family: sans-serif;font-size: 20px">We are glad to be a part of Coding Ninjas Ambassador Program because they are helping a lot to students to utilize this lock down period. They organised an event ‘Ninja Thon’ in which students in a group of Team have to make a website. So ,we ‘Team Cheese Weasels’ came up with an idea of making such website which can helps other in this pandemic situation.
+As people have to search a lot regarding any COVID facilities or issues, so we tried to club all the facilities in a single platform.</p>
+
+<div class="btn"><a href="https://medium.com/@divyaahuja1432/team-cheese-weasels-33f7908fa7ac">Learn More</a></div></div>
+<div class="services-section" id="services">
+<div class="inner-width">
+	<h1 class="section-title">Our Services</h1>
+	<div class="border"></div>
+<div class="services-container">
+	<div class="service-box">
+		<a class="service-icon" href="#">
+			<i class="fa fa-paint-brush"></i>
+		</a>
+		<div class="service-title">Covid Tracker</div>
+		<div class="service-desc">It will track all the cases of Corona.There will be information of number of the cases.</div>	
+		</div>
+		<div class="service-box">
+		<a class="service-icon" href="{% url 'index' %}">
+			<i class="fa fa-paint-brush"></i>
+		</a>
+				<div class="service-title">Home2Hospital</div>
+		<div class="service-desc">As there is a lack of hospitals so people can quarantine themeseleves in their home.</div>
+			
+		</div>
+			<div class="service-box">
+		<a class="service-icon" href="{% url 'tracker' %}">
+			<i class="fa fa-paint-brush"></i>
+		</a>
+				<div class="service-title">Understanding Corona</div>
+		<div class="service-desc">All the necessary information and myth regardings COVID is available in the website.
+		</div></div>
+			
+		<div class="service-box">
+		<a href="{% url 'lead' %}" class="service-icon">
+			<i class="fa fa-paint-brush"></i>
+		</a>
+		<div class="service-title">Medical Assistance</div>
+		<div class="service-desc">You can ask your queries to our doctors anytime.</div>
+			
+		</div>
+		<div class="service-box">
+		<a class="service-icon" href="https://bit.ly/2XEtdV0">
+			<i class="fa fa-paint-brush"></i>
+		</a>
+		<div class="service-title">Feedback</div>
+		<div class="service-desc">If you are facing any problem in lockdown,give your valuable feedback, your information will reach to correct person.</div>
+			
+		</div>
+		<div class="service-box">
+		<a class="service-icon" href="{% url 'donate' %}">
+			<i class="fa fa-paint-brush"></i>
+		</a>
+		<div class="service-title">Donation</div>
+		<div class="service-desc">Make donations for the people in need.</div>
+			
+		</div>
+	</div>
+</div>
+</div>
+<div class="wrapper" id="ourteam">
+<div class="section-header">
+	<h1> Our Team Members</h1>
+</div>
+<div class="team-member">
+	<img src="{% static 'haran.jpg' %}" alt="">
+	<h3>R.S. Hariharan</h3>
+	<p>Backened Developer</p>
+	<p>
+		<i class="fa fa-facebook"></i>
+		<i class="fa fa-twitter"></i>
+		<i class="fa fa-linkedin"></i>
+	</p>
+</div>
+<div class="team-member">
+	<img src="{% static 'divya.jpg' %}" alt="">
+	<h3>Divya Ahuja</h3>
+	<p> UI/UX Designer</p>
+	<p>
+		<i class="fa fa-facebook"></i>
+		<i class="fa fa-twitter"></i>
+		<i class="fa fa-linkedin"></i>
+	</p>
+</div>
+<div class="team-member">
+	<img src="{% static 'raj.jpg' %}" alt="">
+	<h3>Raj Bhensdadiya</h3>
+	<p> Backened Developer </p>
+	<p>
+		<i class="fa fa-facebook"></i>
+		<i class="fa fa-twitter"></i>
+		<i class="fa fa-linkedin"></i>
+	</p>
+</div>
+<div class="team-member">
+	<img src="{% static 'Shivam1.jpg' %}" alt="">
+	<h3>Shivam Gupta</h3>
+	<p>Marketing</p>
+	<p>
+		<i class="fa fa-facebook"></i>
+		<i class="fa fa-twitter"></i>
+		<i class="fa fa-linkedin"></i>
+	</p>
+</div>
+<div class="team-member">
+	<img src="{% static 'kanishka1.jpg' %}" alt="">
+	<h3>Kanishka </h3>
+	<p> UI/UX Designer</p>
+	<p>
+		<i class="fa fa-facebook"></i>
+		<i class="fa fa-twitter"></i>
+		<i class="fa fa-linkedin"></i>
+	</p>
+</div>
+<div class="team-member">
+	<img src="{% static 'yash.jpg' %}" alt="">
+	<h3>Yash Mehta</h3>
+	<p> Marketing </p>
+	<p>
+		<i class="fa fa-facebook"></i>
+		<i class="fa fa-twitter"></i>
+		<i class="fa fa-linkedin"></i>
+	</p>
+</div>
+</div>
+</div>
+<!--<div class="arrow">
+<a href="#home"><img src="def1.jpg" alt="up_arraow"></a></div>
+<div class="footer1" id="contactus">
+<a href="#" class="btn4">@ Coding Ninjas</a>
+			<a class="btn1" href="#"><i class="fa fa-facebook"></i></a>
+<a class="btn1" href="#"><i class="fa fa-linkedin"></i></a>
+<a class="btn1" href="#"><i class="fa fa-twitter"></i></a>
+<a class="btn1" href="#"><i class="fa fa-instagram"></i></a>
+		</div>
+</div>-->
+</body>
+</html>

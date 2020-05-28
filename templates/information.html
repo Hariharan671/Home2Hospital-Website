@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home2Hospital</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body class="ss">
+	<div class="hero">		
+	<h1>Welcome to Home2Hospital {{ current }} </h1>
+		<div class="form-box">
+			<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home2Hospital</h1>
+			<div class="button-box">
+				<div id="btn"></div>
+			<button type="button" class="toggle-btn" onclick="facilities()">Facilities</button>
+			<button type="button" class="toggle-btn" onclick="staff()">Details</button>
+			</div>
+			<form id="facilities" action="{% url 'facilities' %}" class="input-group" method="POST">
+
+				{% if facility %}
+				<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Facilities Required from H2H </h4><h4 style="color: red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Updated</h4>
+				{% else %}
+				<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Facilities Required from H2H </h4>
+				{% endif %}
+				<br>
+				{% csrf_token %}
+				<p>Mask:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" name="radio3" value="on" class="check-box" required="required">Yes&nbsp;
+				<input type="radio" name="radio3" value="off" class="check-box">No</p>
+				<p>Hand Sanitizer:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="radio4" class="check-box" value="on" required="required">Yes&nbsp;
+				<input type="radio" name="radio4" value="off" class="check-box">No</p>
+				<p>Proper Ventilation:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="radio5" class="check-box" value="on" required="required">Yes&nbsp;
+				<input type="radio" name="radio5" value="off" class="check-box">No</p>
+				<p>Wheel Chair:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="radio1" class="check-box" value="on" required="required">Yes&nbsp;
+				<input type="radio" value="off" name="radio1" class="check-box">No</p>
+				<button type="submit" class="submit-btn">Submit</button>
+				
+
+			</form>
+				<form id="staff" action="{% url 'staff' %}" class="input-group" method="POST">
+
+				{% if staff %}
+				<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Details Filled by Staff </h4><h4 style="color: red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Updated</h4>
+				{% else %}
+				<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Details Filled by Staff</h4>
+				{% endif %}
+				<br>
+				{% csrf_token %}
+				<input type="text" class="input-field" name="bodytemp"
+				placeholder="Enter Body Temperature" required>
+				<input type="text" class="input-field" name="pulse"
+				placeholder="Enter Pulse Rate" required>
+				<input type="text" class="input-field" name="bp"
+				placeholder="Enter Blood Pressure" required><br>
+				Cleaning is done or not:&nbsp;&nbsp;<input type="radio" name="radio6" class="check-box" required="required" value="on">Yes&nbsp;
+				<input type="radio" name="radio6" value="off" class="check-box">No
+				All Facilities Available:&nbsp;&nbsp;&nbsp;<input type="radio" name="radio2" class="check-box" required="required" value="on">Yes&nbsp;
+				<input type="radio" name="radio2" value="off" class="check-box">No
+				<button type="submit" class="submit-btn">Submit</button>
+				
+
+			</form>
+
+		</div>
+
+	</div>
+	<script>
+		var x=document.getElementById("facilities");
+		var y=document.getElementById("staff");
+		var z=document.getElementById("btn");
+		function staff()
+		{
+			x.style.left="-400px";
+			y.style.left="50px";
+			z.style.left="110px";
+		}
+		function facilities()
+		{
+			x.style.left="50px";
+			y.style.left="450px";
+			z.style.left="0px";
+		}
+	</script>
+</body>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+.ss{
+	height: 80%;
+	background-image: url("https://www.indianmedicalholiday.com/wp-content/uploads/2019/03/banner-img4.jpg");
+	background-size: 200%;
+	overflow-y: 80%;
+}
+.hero
+{
+	height: 120%;
+	width: 100%;
+	background-image: url("https://www.indianmedicalholiday.com/wp-content/uploads/2019/03/banner-img4.jpg");
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+}
+.form-box
+{
+	width: 380px;
+	height: 600px;
+	position: relative;
+	margin:6% auto;
+	background: #fff;
+	padding: 5px;
+	overflow: hidden;
+}
+.button-box
+{
+	width:220px;
+	margin: 35px auto;
+	position: relative;
+	box-shadow: 0 0 20px 9px #ff61241f;
+	border-radius: 30px;
+}
+.toggle-btn
+{
+	padding: 10px 30px;
+	cursor: pointer;
+	background: transparent;
+	border: 0;
+	outline: none;
+	position: relative;
+}
+#btn
+{
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 110px;
+	height: 100%;
+	background: linear-gradient(to right, #ff105f, #ffad06);
+	border-radius: 30px;
+	transition: .5s;
+}
+.input-group
+{
+	top: 180px;
+	position: absolute;
+	width: 280px;
+	transition: .5s;
+}
+.input-field
+{
+	width: 100%;
+	padding: 10px 0;
+	margin: 5px 0;
+	border-left: 0;
+	border-top: 0;
+	border-right: 0;
+	border--bottom: 1px solid #999;
+	outline: none;
+	background: transparent;
+}
+.submit-btn
+{
+	width: 85%;
+	padding: 10px 30px;
+	cursor:pointer;
+	display: block;
+	margin: auto;
+	background: linear-gradient(to right, #ff105f, #ffad06);
+	border:0;
+	outline: none;
+	border-radius: 30px;
+
+}
+.check-box
+{
+	margin: 30px 10px 30px 0;
+}
+span
+{
+	color: #777;
+	font-size: 12px;
+	bottom: 68px;
+	position: absolute;
+
+}
+#login
+{
+	left: 50px;
+}
+#register
+{
+	left: 450px;
+}
+#facilities{
+	left: 50px;
+}
+#staff{
+	left: 450px;
+}
+</style>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ 	<title>Feedback Form</title>
+ 	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">		
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="Style.css">
+
+</head>
+
+<body>	
+    <section class="hero">
+
+<div class="view">
+	<img src="1.svg">
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+			
+			<h1 class="text-center mt-5 font-weight-bold">Feedback</h1>
+			<h3 class="text-center">Please write your feedback below:</h3>
+			<h3 class="mt-4">How do you rate your overall experience?</h3>
+
+			<form>
+				<label class="radio-inline"><input type="radio" required name="experience0" value="Bad">Bad</label>
+				<label class="radio-inline"><input type="radio" name="experience0" value="Average">Average</label>
+                <label class="radio-inline"><input type="radio" name="experience0" value="Good">Good</label>
+
+			</div>
+			</div>					
+
+			<div class="row">
+				<div class="col-md-2"></div>
+				<label class="col-md-4">Full Name*<br>
+					<input type="text" id="text" name="name" required="" placeholder="Abdul Rafay"></label>
+
+					<label class="col-md-4">Email*<br>
+					<input type="email" id="text" name="email" required="" placeholder="theprovider@gmail.com"></label>
+			</div>
+
+			<div class="row">
+				<div class="col-md-2"></div>
+				<label class="col-md-4">Address*<br>
+					<input type="character" id="text" name="address" required="" placeholder="hussainpur"></label>
+
+					<label class="col-md-4">Phone*<br>
+					<input type="number" id="text" name="phone" required="" placeholder="+92123456789"></label>
+			</div>
+                
+
+        <div class="row">
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+       
+        <h3 class="mt-4">Facing difficulty in accessing Medical Facilities?</h3>
+
+			
+				<label class="radio-inline"><input type="radio" name="experience1" required value="Bad">Yes</label>
+				<label class="radio-inline"><input type="radio" name="experience1" value="Good">No</label>
+                
+                <h3 class="mt-4">Facing difficulty in accessing Transport Facilities?</h3>
+
+			
+				<label class="radio-inline"><input type="radio" name="experience2" required value="Bad">Yes</label>
+				<label class="radio-inline"><input type="radio" name="experience2" value="Good">No</label>
+                <h3 class="mt-4">Facing difficulty in accessing Food items?</h3>
+
+			
+				<label class="radio-inline"><input type="radio" name="experience3" required value="Bad">Yes</label>
+				<label class="radio-inline"><input type="radio" name="experience3" value="Good">No</label>
+                </div>
+                </div>
+			<div class="row">
+				<div class="col-md-2"></div>
+				<label class="col-md-8">Your Feedback*<br>
+					<textarea id="message" required="" placeholder="Write yor message here" cols="4" rows="1"></textarea></label>
+			</div>
+
+				<div class="row">
+				<div class="col-md-2"></div>
+				<button class="btn btn-primary" style="width: 12.5%; position: absolute; margin-left: 40%;">Submit</button>
+			</div>
+			<br><br><br>
+			</form>
+            
+</div>
+            </section>
+
+</body>
+
+<style>
+body{
+	font-family: 'josefin Sans', Sans-serif;
+	background-image: url("https://www.indianmedicalholiday.com/wp-content/uploads/2019/03/banner-img4.jpg");
+	background-size: 200%;
+
+
+    
+}
+img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.hero
+{
+	height: 120%;
+	width: 100%;
+	background-image: url("https://www.indianmedicalholiday.com/wp-content/uploads/2019/03/banner-img4.jpg");
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+}
+.radio-inline{
+	margin: 0px 40px 20px 0px;
+	cursor: pointer;
+}
+
+label{
+	color: #000;
+}
+
+#text{
+	height: 40px;
+	border-radius: 5px;
+	padding-left: 10px;
+	font-size: 14px;
+	border: none;
+	width: 100%;
+	color: #000;
+    
+}
+
+#message{
+	outline: none;
+	border: none;
+	padding: 10px 0px 0px 15px;
+	font-size: 16px;
+	color:#000;
+	border-radius: 5px;
+	width: 100%
+}
+</style>
+</html>  

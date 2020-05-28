@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>covid19</title>
+    <link rel="icon" href="" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+    <header style="margin-bottom: 20px;">
+        <img class="logo" style="width: 100px; height: 100px;" src="https://cdn.pixabay.com/photo/2020/04/11/18/17/virus-5031527_960_720.png" alt="logo">
+        <nav>
+            <ul class="nav__links">
+                <li><a style="font-size: 30px">Hello,Patient ! Welcome you to Quarantine Medical Assistance Portal</a></li>
+            </ul>
+        </nav>
+        <a href="https://www.mohfw.gov.in/" class="cta"><button>Helpline</button></a>
+    </header>
+
+    <div class="container">
+    {% if a %}
+    <h1 style="margin-bottom: 20px;">Tell us your Medical Problem</h1>
+    {% else %}
+    <h1 style="margin-bottom: 20px;">Tell us your Medical Problem</h1>
+    <h3 style="color:green; margin-bottom: 20px;">(Your Question submitted Successfully. You will receive a reply from our doctor in less than 24 hours)</h3>
+    {% endif %}
+    <form method="POST" action="{% url 'doubt' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="InputName">Full Name</label>
+          <input type="text" class="form-control" id="InputName" aria-describedby="Help" required placeholder="Walter White" name="name">
+          <small id="Help" class="form-text text-muted">We'll never share your details with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="InputAge">Age</label>
+          <input type="number" required class="form-control" id="InputAge" placeholder="69" name="age">
+        </div>
+        <div class="form-group">
+            <label for="InputSex">Sex</label>
+            <input type="text" class="form-control" id="InputSex" required placeholder="Male" name="sex">
+        </div>
+        <div class="form-group">
+            <label for="mail">Sex</label>
+            <input type="mail" class="form-control" id="mail" required placeholder="haran@gmail.com" name="email">
+        </div>
+        <div class="form-group">
+            <label for="InputCountry">Country</label>
+            <input type="text" class="form-control" id="InputCountry" required placeholder="India" name="country">
+        </div>  
+        <div class="form-group">
+            <label for="State">State</label>
+            <input type="text" class="form-control" id="State" required placeholder="Kerala" name="state">
+        </div>  
+        <div class="form-group">
+            <label for="Phone">Phone</label>
+            <input type="number" class="form-control" id="Phone" required placeholder="9478383847" name="phone">
+        </div>  
+        <div class="form-group">
+            <label for="Inputimage">Describe your problem clearly</label>
+            <textarea style="height: 100px" type="text" id="Inputimage" name="question" required></textarea>
+            <br><br>
+            <input id="butt" for="Inputimage" type="submit" style="margin-left: 44%" value="Send Details">
+        </div> 
+    </form>
+        <!--<div class="row">
+            <div class="col-6">
+                <div class="card" style="width: 100%; text-align: center;">
+                    <div class="card-body">
+                      <h4 class="card-title">PREVIEW IMAGE</h4>
+                      <img src="" style="background-color: lightcoral; width: 500px; height: 500px;"></img>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-6">
+                <div class="card" style="width: 100%; text-align: center;">
+                    <div class="card-body">
+                      <h4 class="card-title">OUTPUT IMAGE</h4>
+                      <img id="myDIV2" src="" style="background-color: lightcoral; width: 500px; height: 500px;"></img>
+                    </div>
+                  </div>
+            </div>
+        </div>
+      </form>
+      <hr>
+      <div class="row" id="myDIV1" style="">
+          <div class="col-6">
+            <div class="card" style="width: 100%; text-align: center; background-color: rgba(0,255,100,0.25);">
+                <div class="card-body">
+                  <h4 class="card-title">FINDINGS</h4>
+                  <h2 class="text-success">Running..</h2>
+                </div>
+              </div>
+          </div>
+          <div class="col-6">
+            <div class="card" style="width: 100%; text-align: center; background-color: rgba(0,255,100,0.25);">
+                <div class="card-body">
+                  <h4 class="card-title">ACCURACY</h4>
+                  <h2 class="text-danger">Running...</h2>
+                </div>
+              </div>
+          </div>
+      </div>
+</div>-->
+  
+        <div class="footer" style="vertical-align: middle;">
+            <div class="container" style="vertical-align: middle;">
+                <p style="color: lemonchiffon;">@covid<strong>19</strong></p>
+            </div>
+        </div>
+        <script src="/js/main.js"></script>
+    </body>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+*{
+    font-family: "Montserrat", sans-serif;
+}
+
+header{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #24252A;
+}
+
+li, a, button{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.logo{
+    cursor: pointer;
+}
+
+.nav__links{
+    list-style: none;
+}
+
+.nav__links li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav__links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover{
+    color: #0088a9;
+}
+
+button{
+    padding: 9px 25px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover{
+    background-color: rgba(0,136,169,0.8);
+}
+
+.img-thumbnail{
+    margin-bottom: 20px;
+}
+.card{
+    margin-bottom: 20px;
+}
+
+.footer{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100px;
+    background-color: #24252A;
+}
+
+#butt{
+    padding: 9px 25px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    color: #edf0f1;
+}
+
+#butt:hover{
+    background-color: rgba(0,136,169,0.8);
+}
+</style>
+<script>
+</script>
+</html>

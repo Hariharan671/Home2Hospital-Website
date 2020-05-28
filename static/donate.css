@@ -1,0 +1,94 @@
+*
+{
+	background: url("download.jpg") cover no-repeat;
+	margin: 0;
+	padding: 0;
+}
+.main
+{
+	color: #fff;
+	font-size: 30px;
+	text-align: center;
+	background-color: black;
+	background: url("download.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.table-box
+{
+	margin: 50px auto;
+}
+.table-row
+{
+	display: table;
+	width: 80%;
+	margin: 10px auto;
+	font-family: sans-serif;
+	background: transparent;
+	padding: 12px 0;
+	color: #555;
+	font-size: 13px;
+	box-shadow: 0 1px 4px 0 rgba(0,0,50,0.3);
+
+}
+.table-cell
+{
+	display: table-cell;
+	width: 30%;
+	text-align: center;
+	padding: 4px 0;
+	border-right: 1px solid #d6d4d4;
+	vertical-align: middle;
+}
+.table-head
+{
+	background: #8665f7;
+	box-shadow: none;
+	color: #fff;
+	font-weight: 900;
+	font-size: 20px;
+	font-style: bold;
+	text-align: center;
+}
+.table-head .table-cell
+{
+	border-right: none;
+	font-style: bold;
+	font-family: sans-serif;
+}
+.first-cell1
+{
+	width: 50px;
+}
+.second-cell2
+{
+	width: 50px;
+}
+.last-cell3
+{
+	width: 100px;
+}
+.last-cell
+{
+	width: 100px;
+	height: 300px;
+	border-right: none;
+	font-size: 20px;
+	color: #fff;
+}
+.second-cell
+{
+	height: 300px;
+	width: 33.33%;
+	font-size: 20px;
+	color: #fff;
+}
+.first-cell
+{
+	font-size: 20px;
+	height: 300px;
+	text-align: left;
+	padding-left: 10px;
+	width: 33.33%;
+	color: #fff;
+}
